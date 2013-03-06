@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.phpt set filetype=phpunit.php
+au! BufRead,BufNewFile,BufWinEnter *.phpt setfiletype phpunit.php
