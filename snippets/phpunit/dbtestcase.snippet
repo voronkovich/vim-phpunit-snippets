@@ -1,0 +1,18 @@
+<?php
+
+namespace ${1:`substitute(substitute(substitute(expand("%:p:h"), '\v(.*\/\l+)((\/\u\w+)+)$', '\2', ''), '\/', '\\\', 'g'), '\\\', '', '')`};
+
+use PHPUnit_Extensions_Database_TestCase as TestCase;
+
+class ${2:`Filename('', 'myClass')`} extends TestCase
+{
+	protected function getConnection()
+	{
+		${3:# code ...}
+	}
+
+	protected function getDataSet()
+	{
+		${4:# code ...}
+	}
+}

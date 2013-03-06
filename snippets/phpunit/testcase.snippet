@@ -1,0 +1,10 @@
+<?php
+
+namespace ${1:`substitute(substitute(substitute(expand("%:p:h"), '\v(.*\/\l+)((\/\u\w+)+)$', '\2', ''), '\/', '\\\', 'g'), '\\\', '', '')`};
+
+use PHPUnit_Framework_TestCase as TestCase;
+
+class ${2:`Filename('', 'myClass')`} extends TestCase
+{
+	${3}
+}

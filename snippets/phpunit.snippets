@@ -1,0 +1,194 @@
+# Methods 
+snippet aPrc
+	protected function assertPreConditions()
+	{
+		${1:# code...}
+	}
+snippet aPoc
+	protected function assertPostConditions()
+	{
+		${1:# code...}
+	}
+snippet tD
+	protected function tearDown()
+	{
+		${1:# code ...}
+	}
+snippet tDbc
+	protected function tearDownAfterClass()
+	{
+		${1:# code ...}
+	}
+snippet sU
+	protected function setUp()
+	{
+		${1:# code ...}
+	}
+snippet sUbc
+	protected function setUpBeforeClass()
+	{
+		${1:# code ...}
+	}
+snippet oNst
+	protected function onNotSuccessfulTest(${1:Exception $e})
+	{
+		${1:# code ...}
+		throw $e;
+	}
+snippet funtest
+	public function test${1:test name}()
+	{
+		${2:# code ...}
+	}
+# Annotations 
+snippet @a
+	@author ${1:Sebastian Bergmann}
+snippet @ee
+	@expectedException ${1:MyException}
+snippet @eec
+	@expectedExceptionCode ${1:code}
+snippet @bg
+	@backupGlobals ${1:enabled} 
+snippet @bsa
+	@backupStaticAttributes ${1:enabled} 
+snippet @cci
+	@codeCoverageIgnore
+snippet @ccis
+	@codeCoverageIgnoreStart
+snippet @ccie
+	@codeCoverageIgnoreEnd
+snippet @c
+	@covers ${1:Class::method}
+snippet @cn
+	@coversNothing
+snippet @dp
+	@dataProvider ${1}
+snippet @d
+	@depends ${1:testMethod}
+snippet @g
+	@group ${1:specification}
+snippet @ob
+	@outputBuffering ${1:enabled} 
+snippet @r
+	@requires ${1:PHP 5.3}
+snippet @rtisp
+	@runTestsInSeparateProcesses	
+snippet @risp
+	@runInSeparateProcess
+snippet @t
+	/**
+	 * @test
+	 */
+	public function ${1}()
+	{
+		${2: # code ...}
+	}
+snippet @td
+	@testdox ${1}
+snippet @ti
+	@ticket ${1}
+# Assertions
+snippet aarrayhaskey 
+	$this->assertArrayHasKey(${1:$key}, ${2:$array});
+snippet aarrayhaskey 
+	$this->assertArrayNotHasKey(${1:$key}, ${2:$array});
+snippet aclasshasattribute
+	$this->assertClassHasAttribute(${1:$attributeName}, ${2:$className});
+snippet anclasshasattribute 
+	$this->assertClassNotHasAttribute(${1:$attributeName}, ${2:$className});
+snippet aclasshasstaticattribute
+	$this->assertClassHasStaticAttribute(${1:$attributeName}, ${2:$className});
+snippet anclasshasstaticattribute 
+	$this->assertClassNotHasStaticAttribute(${1:$attributeName}, ${2:$className});
+snippet acontains
+	$this->assertContains(${1:$needle}, ${2:$haystack});
+snippet ancontains
+	$this->assertContains(${1:$needle}, ${2:$haystack});
+snippet acontainsonly
+	$this->assertContainsOnly(${1:$type}, ${2:$haystack});
+snippet ancontainsonly
+	$this->assertNotContainsOnly(${1:$type}, ${2:$haystack});
+snippet acount
+	$this->assertCount(${1:0}, ${2:array('foo')});
+snippet ancount
+	$this->assertNotCount(${1:0}, ${2:array('foo')});
+snippet aequalxmlstructure
+	$this->assertEqualXMLStructure(${1:$expectedNode}, ${2:$actualNode})
+snippet aequals
+	$this->assertEquals(${1:$expected}, ${2:$actual});
+snippet anequals
+	$this->assertNotEquals(${1:$expected}, ${2:$actual});
+snippet aempty
+	$this->assertEmpty(${1:array('foo')});
+snippet anempty
+	$this->assertNotEmpty(${1:array('foo')});
+snippet afalse
+	$this->assertFalse(${1:TRUE});
+snippet afileequals
+	$this->assertFileEquals(${1:$expected}, ${2:$actual});
+snippet anfileequals
+	$this->assertFileNotEquals(${1:$expected}, ${2:$actual});
+snippet afileexists
+	$this->assertFileExists(${1:$filename});
+snippet anfileexists 
+	$this->assertFileNotExists(${1:$filename});
+snippet agreaterthan
+	$this->assertGreaterThan(${1:$expected}, ${2:$actual});
+snippet agreaterthanorequal
+	$this->assertGreaterThanOrEqual(${1:$expected}, ${2:$actual});
+snippet ainstanceof 
+	$this->assertInstanceOf(${1:$expected}, ${2:$actual});
+snippet aninstanceof 
+	$this->assertNotInstanceOf(${1:$expected}, ${2:$actual});
+snippet alessthan
+	$this->assertLessThan(${1:$expected}, ${2:$actual});
+snippet alessthanorequal
+	$this->assertLessThanOrEqual(${1:$expected}, ${2:$actual});
+snippet anull 
+	$this->assertNull(${1:$variable});
+snippet annull 
+	$this->assertNotNull(${1:$variable});
+snippet aobjecthasattribute 
+	$this->assertObjectHasAttribute(${1:$attributeName}, ${2:$object});
+snippet anobjecthasattribute 
+	$this->assertObjectNotHasAttribute(${1:$attributeName}, ${2:$object});
+snippet aregexp 
+	$this->assertRegExp(${1:$pattern}, ${2:$string});
+snippet anregexp 
+	$this->assertNotRegExp(${1:$pattern}, ${2:$string});
+snippet asame 
+	$this->assertSame(${1:$expected}, ${2:$actual});
+snippet ansame 
+	$this->assertNotSame(${1:$expected}, ${2:$actual});
+snippet astringendswith 
+	$this->assertStringEndsWith(${1:$suffix}, ${2:$string});
+snippet anstringendswith 
+	$this->assertStringEndsNotWith(${1:$suffix}, ${2:$string});
+snippet astringequalsfile 
+	$this->assertStringEqualsFile(${1:$expectedFile}, ${2:$actualString});
+snippet anstringequalsfile 
+	$this->assertStringNotEqualsFile(${1:$expectedFile}, ${2:$actualString});
+snippet astringstartswith 
+	$this->assertStringStartsWith(${1:$prefix}, ${2:$string});
+snippet anstringstartswith 
+	$this->assertStringStartsNotWith(${1:$prefix}, ${2:$string});
+snippet atag 
+	$this->assertTag(${1:$matcher}, ${2:$actual});
+snippet antag 
+	$this->assertNotTag(${1:$matcher}, ${2:$actual});
+snippet athat 
+	$this->assertThat(${1:$value}, ${2:$constrait});
+snippet atrue 
+	$this->assertTrue(${1:$condition});
+snippet axmlfileequalsxmlfile
+	$this->assertXmlFileEqualsXmlFile(${1:$expectedFile}, ${2:$actualFile});
+snippet anxmlfileequalsxmlfile
+	$this->assertXmlFileNotEqualsXmlFile(${1:$expectedFile}, ${2:$actualFile});
+snippet axmlstringequalsxmlfile
+	$this->assertXmlStringEqualsXmlFile(${1:$expectedFile}, ${2:$actualXml});
+snippet anxmlstringequalsxmlfile
+	$this->assertXmlStringNotEqualsXmlFile(${1:$expectedFile}, ${2:$actualXml});
+snippet axmlstringequalsxmlstring 
+	$this->assertXmlstringEqualsXmlString(${1:$expectedXml}, ${2:$actualXml});
+snippet anxmlstringequalsxmlstring
+	$this->assertXmlStringNotEqualsXmlString(${1:$expectedXml}, ${2:$actualXml});
