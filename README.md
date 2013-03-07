@@ -6,8 +6,8 @@ Code snippets for PHPUnit. Require installed SnipMate plugin.
 Installation
 ------------
 
-After installation add into yout .vimrc
-```vimml 
+After installation add into your .vimrc
+```viml 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php,html,javascript'
