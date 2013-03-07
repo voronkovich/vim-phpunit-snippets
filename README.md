@@ -7,7 +7,7 @@ Installation
 ------------
 
 After installation add into your .vimrc
-```viml 
+```vim 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php,html,javascript'
